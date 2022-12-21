@@ -7,8 +7,6 @@ import {
 } from "react-router-dom";
 import Navbar from './Component/Navbar';
 import Home from './Component/Home';
-import OS from './Component/OS';
-import Shell from './Component/Shell';
 import About from './Component/About';
 import NoteState from './Context/notes/NoteState';
 import Signup from './Component/Signup';
@@ -44,16 +42,12 @@ function App() {
   <Route exact path="/signup" element={<Signup showalert={showalert}/>} />
   <Route exact path="/forget" element={<Forget showalert={showalert}/>} />  
   <Route exact path="/about" element={<About/>} />
-  <Route path="/os" element={<OS showalert={showalert}/>} />
-  <Route path="/shell" element={<Shell showalert={showalert}/>} />
   <Route  path='/login' element={<Navigate replace to="/" />}>
 </Route> </Routes>:<Routes>
 <Route exact path="/login" element={<Login showalert={showalert}/>} />
   <Route exact path="/signup" element={<Signup showalert={showalert}/>} />
   <Route exact path="/forget" element={<Forget showalert={showalert}/>} />   
    <Route exact path="/" element={<Home showalert={showalert}/>} />
-   <Route path="/os" element={<OS showalert={showalert}/>} />
-  <Route path="/shell" element={<Shell showalert={showalert}/>} />
    <Route exact path="/about" element={<About/>} />
  </Routes>}
  
