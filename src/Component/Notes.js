@@ -59,7 +59,7 @@ const handleClose = () => setShow(false);
   </div>
   <div className="mb-3">
     <label htmlFor="edes" className="form-label">Description</label>
-    <input type="text" className="form-control" id="edes" minLength={5} name="edescription" value={note.edescription} onChange={onChange} required />
+    <textarea type="text" className="form-control" id="edes" minLength={5} name="edescription" value={note.edescription} onChange={onChange}  rows={2} required></textarea>
   </div>
  
 </form>

@@ -64,10 +64,12 @@ e.preventDefault();
 const response = await fetch(`${process.env.REACT_APP_BACKEND_API}/auth/createuser`, {
     method: 'POST', 
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
         },
  body: JSON.stringify({name:credentials.name,email:credentials.email,password:credentials.password})
   });
+  console.log(response.body);
   const json =await response.json();
   if(json.success){
     //redirect

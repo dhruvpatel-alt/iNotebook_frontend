@@ -55,7 +55,7 @@ if(e.target.value.length<5){
   </div>
   <div className="mb-3">
     <label htmlFor="des" className="form-label">Description</label>
-    <input type="text" className="form-control" value={note.description} onBlur={desBlur} minLength={5} id="des" name="description" onChange={desonChange} required/>
+    <textarea type="text" className="form-control" value={note.description} onBlur={desBlur} minLength={5} id="des" name="description" onChange={desonChange} required></textarea>
     {showDes&& <small style={{color:"red"}}>Description must contain atleast 5 letter</small>}
  <small className="container" id="restrict" style={{color:"green"}}>No one will be to access your NOTE without your credentials</small>
   </div>

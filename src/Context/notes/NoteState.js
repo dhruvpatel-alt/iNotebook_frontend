@@ -5,12 +5,12 @@ const NoteState=(props)=>{
   const initialnotes=[];
   const [notes,setNotes]=useState(initialnotes);
       //add note
-      const getNote=async()=>{
+      const getNote=async(jwt)=>{
         const response = await fetch(`${process.env.REACT_APP_BACKEND_API}/notes/fetchallNote`, {
           method: 'GET', 
           headers: {
       'Content-Type': 'application/json',
-      "auth-token":localStorage.getItem('token')
+      "auth-token":jwt||localStorage.getItem('token')
         }
       });
       const json=await response.json();
