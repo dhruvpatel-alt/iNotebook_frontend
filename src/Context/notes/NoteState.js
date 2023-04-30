@@ -5,7 +5,7 @@ const NoteState=(props)=>{
   const initialnotes=[];
   const [notes,setNotes]=useState(initialnotes);
   
-  //add note
+  //add note here
   const getNote=async(jwt)=>{
     const response = await fetch(`${process.env.REACT_APP_BACKEND_API}/notes/fetchallNote`, {
       method: 'GET', 
